@@ -1,0 +1,12 @@
+id,signal,type,normal_state,safety_role,notes
+DI-01,E_STOP_A,digital NC,closed,yes,hardwired safety relay A
+DI-02,E_STOP_B,digital NC,closed,yes,hardwired safety relay B
+DI-03,DOOR_A,digital NC,closed,yes,interlock A
+DI-04,DOOR_B,digital NC,closed,yes,interlock B
+DI-05,X_HOME,digital,open,no,controller homing
+DI-06,Y_HOME,digital,open,no,controller homing
+DI-07,Z_HOME,digital,open,no,controller homing
+AI-01,INSERT_FORCE,analog,N/A,no,calibrated load-cell path
+DO-01,MOTOR_ENABLE,digital,off,yes,safety relay interface
+DO-02,GRIPPER_RELEASE,digital,off,no,fail-safe mechanics required
+DO-03,TEST_ENABLE,digital,off,no,excitation default off

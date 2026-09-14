@@ -1,0 +1,13 @@
+{
+  "recipe_id": "LF-DEMO-MFJ-4C", "revision": "A", "fixture_id": "LF-MFJ-4C-001", "calibration_id": "LF-CAL-2026-001",
+  "connector": {"manufacturer": "Molex", "housing_part_number": "39-01-2040", "terminal_part_number": "39-00-0038", "cavity_count": 4, "cavity_view": "Mating face, latch up: cavities 1-2 top left-to-right; 3-4 bottom left-to-right."},
+  "insertion": {"force_max_n": 15.0, "seating_method": "Proposed: force/travel signature plus mating test; physical validation required."},
+  "wires": [
+    {"identifier":"W1", "tray_slot":1, "target_cavity":1, "gauge_awg":22, "color":"red", "terminal_part_number":"39-00-0038"},
+    {"identifier":"W2", "tray_slot":2, "target_cavity":2, "gauge_awg":22, "color":"black", "terminal_part_number":"39-00-0038"},
+    {"identifier":"W3", "tray_slot":3, "target_cavity":3, "gauge_awg":22, "color":"yellow", "terminal_part_number":"39-00-0038"},
+    {"identifier":"W4", "tray_slot":4, "target_cavity":4, "gauge_awg":22, "color":"blue", "terminal_part_number":"39-00-0038"}
+  ],
+  "expected_connectivity": {"W1":"J2-1", "W2":"J2-2", "W3":"J2-3", "W4":"J2-4"},
+  "source_references": ["Molex PS-5556-002 Rev H3", "Molex 39-01-2040 product drawing: controlled copy required before fabrication"]
+}

@@ -1,0 +1,98 @@
+{
+  "report_version": "1",
+  "scope_of_supply": "LoomForge supplies engineering plans, digital design files, software, and supporting documentation only. No physical machine or assembled equipment is supplied. The receiving manufacturer or its appointed machine builder must procure or fabricate the parts, assemble the equipment, and perform the necessary engineering review, safety assessment, calibration, testing, and application-specific validation before use. The current package is a development design and is not represented as production-ready or certified.",
+  "evidence_notice": "SIMULATION results are synthetic, not physical verification.",
+  "job": {
+    "job_id": "ff6a38a6-ce26-4ca3-b921-c63a542637c8",
+    "mode": "SIMULATED",
+    "recipe_id": "LF-DEMO-MFJ-4C",
+    "recipe_revision": "A",
+    "fixture_id": "LF-MFJ-4C-001",
+    "calibration_id": "LF-CAL-2026-001",
+    "scenario": "incorrect_connection",
+    "software_id": "loomforge-sim-0.1.0",
+    "firmware_id": "SIMULATED-NO-FIRMWARE",
+    "state": "COMPLETE",
+    "disposition": "FAIL",
+    "started_at": "2026-09-14T14:51:18.434340+00:00",
+    "completed_at": "2026-09-14T14:51:18.434380+00:00",
+    "outcomes": [
+      {
+        "wire_id": "W1",
+        "cavity": 1,
+        "status": "PASS",
+        "message": "Synthetic insertion and proposed seating signature accepted.",
+        "force_trace_n": [
+          0.2,
+          0.7,
+          1.9,
+          3.2,
+          3.7,
+          2.1
+        ]
+      },
+      {
+        "wire_id": "W2",
+        "cavity": 2,
+        "status": "PASS",
+        "message": "Synthetic insertion and proposed seating signature accepted.",
+        "force_trace_n": [
+          0.2,
+          0.7,
+          1.9,
+          3.2,
+          3.7,
+          2.1
+        ]
+      },
+      {
+        "wire_id": "W3",
+        "cavity": 3,
+        "status": "PASS",
+        "message": "Synthetic insertion and proposed seating signature accepted.",
+        "force_trace_n": [
+          0.2,
+          0.7,
+          1.9,
+          3.2,
+          3.7,
+          2.1
+        ]
+      },
+      {
+        "wire_id": "W4",
+        "cavity": 4,
+        "status": "PASS",
+        "message": "Synthetic insertion and proposed seating signature accepted.",
+        "force_trace_n": [
+          0.2,
+          0.7,
+          1.9,
+          3.2,
+          3.7,
+          2.1
+        ]
+      }
+    ],
+    "electrical_results": {
+      "result": "FAIL",
+      "open": [],
+      "wrong_mapping": [
+        {
+          "wire": "W2",
+          "expected": "J2-2",
+          "observed": "J2-3"
+        }
+      ],
+      "shorts": [],
+      "note": "SIMULATED 5 V / 2 mA continuity mapping test"
+    },
+    "faults": [
+      {
+        "code": "WRONG_CONNECTION",
+        "message": "Mating test fixture mapping differs from recipe."
+      }
+    ],
+    "interventions": []
+  }
+}

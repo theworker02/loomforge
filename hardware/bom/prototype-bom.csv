@@ -1,0 +1,15 @@
+part_number,description,qty,make_buy,source_or_basis,status
+LF-100,base plate/frame,1,make,concept CAD,proposed
+LF-110,gantry/frame,1,make,concept CAD,proposed
+LF-200,X/Y/Z motion,1,set buy,select after load test,unresolved
+LF-220,keyed gripper+guide,1,make,first physical experiment,proposed
+LF-310,Mini-Fit Jr fixture cartridge,1,make,controlled drawing needed,proposed
+39-01-2040,Mini-Fit Jr 4 circuit housing,1,buy,Molex,selected provisional
+39-00-0038,Mini-Fit Jr female terminal,4,buy,Molex,selected provisional
+44281-0001,Mini-Fit Jr test plug,1,buy,Molex,verify fixture fit
+LF-400,12-slot tray,1,make,concept CAD,proposed
+LF-500,interlocked guard,1,make,qualified risk review,proposed
+LF-610,certified 24V >=8A PSU,1,buy,select model,unresolved
+LF-620,safety relay E-stop switches,1,set buy,select per risk review,unresolved
+LF-630,controller/drivers,1,set buy,established platform required,unresolved
+LF-640,0-50N sensor+conditioning,1,set buy,calibration required,unresolved

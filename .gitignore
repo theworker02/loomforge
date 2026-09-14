@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.sites-runtime/
+reports/*.sqlite
+reports/design-review-preview-*.png

@@ -1,0 +1,126 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [9 0 R 10 0 R 11 0 R 12 0 R 13 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Length 1189 >>
+stream
+BT /F1 24 Tf 1 0 0 1 54 720 Tm (LOOMFORGE LF-P1-R02) Tj
+/F1 12 Tf 1 0 0 1 54 690 Tm (DESIGN REVIEW / DEVELOPMENT PACKAGE) Tj
+/F1 11 Tf 1 0 0 1 54 650 Tm (Scope of supply: LoomForge supplies engineering plans, digital design files, software,) Tj
+/F1 11 Tf 1 0 0 1 54 632 Tm (and supporting documentation only. No physical machine or assembled equipment is) Tj
+/F1 11 Tf 1 0 0 1 54 614 Tm (supplied. The receiving manufacturer or its appointed machine builder must procure or) Tj
+/F1 11 Tf 1 0 0 1 54 596 Tm (fabricate the parts, assemble the equipment, and complete the necessary engineering) Tj
+/F1 11 Tf 1 0 0 1 54 578 Tm (review, safety assessment, calibration, testing, and application-specific validation) Tj
+/F1 11 Tf 1 0 0 1 54 560 Tm (before use.) Tj
+/F1 11 Tf 1 0 0 1 54 530 Tm (Selected configuration: compact benchtop, broad plinth, folded swept side supports, rear) Tj
+/F1 11 Tf 1 0 0 1 54 512 Tm (structural spine, transparent chamber, angled console and front loading deck.) Tj
+/F1 11 Tf 1 0 0 1 54 482 Tm (Status: conceptual CAD and simulated software. Not production-ready or certified.) Tj
+/F1 9 Tf 1 0 0 1 54 38 Tm (LoomForge LF-P1-R02 - development design - page 1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 894 >>
+stream
+BT /F1 24 Tf 1 0 0 1 54 720 Tm (SELECTED MECHANICAL ARRANGEMENT) Tj
+/F1 12 Tf 1 0 0 1 54 690 Tm (Overall envelope: 560 W x 430 D x 520 H mm. Front deck carries 12-slot manual tray, Mini-Fit Jr cartridge and mating test plug.) Tj
+/F1 11 Tf 1 0 0 1 54 650 Tm (Rear spine carries X/Y/Z head, rails, cable chain, camera, separate work/vision light) Tj
+/F1 11 Tf 1 0 0 1 54 632 Tm (zones and rear service routing.) Tj
+/F1 11 Tf 1 0 0 1 54 602 Tm (Head: 210 mm X, 110 mm Y, 72 mm Z; proposed 32 mm controlled insertion; inline force) Tj
+/F1 11 Tf 1 0 0 1 54 584 Tm (mount; soft insulation gripper; split release guide.) Tj
+/F1 11 Tf 1 0 0 1 54 554 Tm (The guide supports terminal to a proposed maximum 12 mm from cavity; this is an) Tj
+/F1 11 Tf 1 0 0 1 54 536 Tm (experimental constraint requiring bench trials.) Tj
+/F1 9 Tf 1 0 0 1 54 38 Tm (LoomForge LF-P1-R02 - development design - page 2) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 1046 >>
+stream
+BT /F1 24 Tf 1 0 0 1 54 720 Tm (OPERATOR AND SAFETY FLOW) Tj
+/F1 12 Tf 1 0 0 1 54 690 Tm (Open upward hinged guard; manually load terminal-forward wire and route slack through comb. Close guard, validate recipe/fixture/calibration, then start supervised sequence.) Tj
+/F1 11 Tf 1 0 0 1 54 650 Tm (Head picks insulated lead, transfers under guide, inserts against bounded force/travel,) Tj
+/F1 11 Tf 1 0 0 1 54 632 Tm (opens split guide and releases. Mating/far-end test evaluates mapping; operator removes) Tj
+/F1 11 Tf 1 0 0 1 54 614 Tm (completed assembly.) Tj
+/F1 11 Tf 1 0 0 1 54 584 Tm (Guard: proposed 6 mm polycarbonate, 105 degree opening, dual-channel interlock. Closing) Tj
+/F1 11 Tf 1 0 0 1 54 566 Tm (never restarts. E-stop remains on right console edge.) Tj
+/F1 11 Tf 1 0 0 1 54 536 Tm (Lighting: 12 W diffuse work, 6 W vision zone with baffle/exposure control, 3 W status) Tj
+/F1 11 Tf 1 0 0 1 54 518 Tm (guide. Lighting is not a safety system.) Tj
+/F1 9 Tf 1 0 0 1 54 38 Tm (LoomForge LF-P1-R02 - development design - page 3) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 1119 >>
+stream
+BT /F1 24 Tf 1 0 0 1 54 720 Tm (FIT REVIEW AND MANUFACTURING) Tj
+/F1 12 Tf 1 0 0 1 54 690 Tm (Manual CAD-envelope review: home/extremes, pickup, approach, full insertion, guide release, door open, fixture removal and rear service. No automated collision, flexible-wire, human-factors or force validation performed.) Tj
+/F1 11 Tf 1 0 0 1 54 650 Tm (Part register: hardware/mechanical/parts.csv. Concept CAD:) Tj
+/F1 11 Tf 1 0 0 1 54 632 Tm (hardware/mechanical/source/loomforge.scad. Central parameters: parameters.json.) Tj
+/F1 11 Tf 1 0 0 1 54 602 Tm (Prototype path: folded/welded plinth, folded aluminum supports/console, machined) Tj
+/F1 11 Tf 1 0 0 1 54 584 Tm (spine/head/fixture, printed ESD tray, purchased motion/safety/light modules.) Tj
+/F1 11 Tf 1 0 0 1 54 554 Tm (Critical release blockers: controlled connector drawings, tolerance stack, guide trials,) Tj
+/F1 11 Tf 1 0 0 1 54 536 Tm (purchased component selection, released electrical/safety design, CAD drawings and site) Tj
+/F1 11 Tf 1 0 0 1 54 518 Tm (validation.) Tj
+/F1 9 Tf 1 0 0 1 54 38 Tm (LoomForge LF-P1-R02 - development design - page 4) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 1022 >>
+stream
+BT /F1 24 Tf 1 0 0 1 54 720 Tm (VISUAL AND MOTION DELIVERABLES) Tj
+/F1 12 Tf 1 0 0 1 54 690 Tm (CAD-generated STL: hardware/mechanical/exports/loomforge-r02-assembly.stl. CAD render: hardware/mechanical/renders/cad-front-hero.png.) Tj
+/F1 11 Tf 1 0 0 1 54 650 Tm (CAD-derived technical SVG set:) Tj
+/F1 11 Tf 1 0 0 1 54 632 Tm (front/rear/side/top/open-loading/cutaway/exploded/insertion/fixture/lighting/operator-sequence.) Tj
+/F1 11 Tf 1 0 0 1 54 602 Tm (Simulated motion demonstrator: reports/motion-demonstration.html. It shares R02 layout) Tj
+/F1 11 Tf 1 0 0 1 54 584 Tm (parameters but establishes neither insertion success nor cycle time.) Tj
+/F1 11 Tf 1 0 0 1 54 554 Tm (Next physical experiment: instrument guided insertion with 30+ housings and 120+ approved) Tj
+/F1 11 Tf 1 0 0 1 54 536 Tm (pre-crimped leads; compare force/travel signatures with approved inspection and retention) Tj
+/F1 11 Tf 1 0 0 1 54 518 Tm (evidence.) Tj
+/F1 9 Tf 1 0 0 1 54 38 Tm (LoomForge LF-P1-R02 - development design - page 5) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000143 00000 n 
+0000000213 00000 n 
+0000001454 00000 n 
+0000002399 00000 n 
+0000003497 00000 n 
+0000004668 00000 n 
+0000005742 00000 n 
+0000005868 00000 n 
+0000005995 00000 n 
+0000006122 00000 n 
+0000006249 00000 n 
+trailer << /Size 14 /Root 1 0 R >>
+startxref
+6376
+%%EOF

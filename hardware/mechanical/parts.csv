@@ -1,0 +1,15 @@
+part_number,description,material,method,qty,revision,make_buy,maturity
+LF-100,Lower plinth structural shell,5052-H32 aluminum 3 mm,folded/welded,1,R02,make,prototype fabrication pending
+LF-110,Rear spine,6061-T6 plate/tube,waterjet+CNC+fasten,1,R02,make,prototype fabrication pending
+LF-120,Swept side supports,5052-H32 aluminum 3 mm,folded panels,2,R02,make,prototype fabrication pending
+LF-200,XYZ insertion head structure,6061-T6,waterjet+CNC,1,R02,make,experimental
+LF-210,Terminal guide split jaws,PEEK or 17-4 SS,EDM/CNC,1,R02,make,experimental
+LF-220,Insulation gripper soft jaws,urethane/PEEK,CNC+molded pad,1,R02,make,experimental
+LF-230,Force sensor mount,6061-T6,CNC,1,R02,make,prototype fabrication pending
+LF-310,Mini-Fit Jr cartridge,6061-T6+CNC polymer nest,CNC,1,R02,make,controlled drawing required
+LF-400,12-position tray,ESD nylon,3D print prototype,1,R02,make,prototype only
+LF-410,Wire combs,ESD nylon,3D print prototype,12,R02,make,prototype only
+LF-500,Transparent front guard,polycarbonate 6 mm,CNC cut+bent/hinged,1,R02,make,safety review required
+LF-600,Angled operator console,5052-H32 aluminum 2 mm,folded,1,R02,make,prototype fabrication pending
+LF-610,Work/vision/status lighting,buy modules,buy,1,R02,buy,selection required
+LF-620,Motion rails/actuators,buy assemblies,buy,1,R02,buy,selection required
