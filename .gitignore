@@ -3,3 +3,5 @@ __pycache__/
 .sites-runtime/
 reports/*.sqlite
 reports/design-review-preview-*.png
+dist/
+*.egg-info/
