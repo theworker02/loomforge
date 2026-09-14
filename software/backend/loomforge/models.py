@@ -83,6 +83,8 @@ class JobRecord:
     electrical_results: dict[str, Any] = field(default_factory=dict)
     faults: list[dict[str, str]] = field(default_factory=list)
     interventions: list[str] = field(default_factory=list)
+    telemetry: list[dict[str, Any]] = field(default_factory=list)
+    machine_configuration: str = "LF-P1-R02"
 
     def jsonable(self) -> dict[str, Any]:
         return asdict(self)

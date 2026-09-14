@@ -8,6 +8,9 @@ from software.backend.loomforge.sim import SimulationAdapter
 from software.backend.loomforge.state import StateError, transition
 from software.backend.loomforge.models import MachineState
 from software.backend.loomforge.report import export_report
+from software.backend.loomforge.machine import MachineConfiguration
+from software.backend.loomforge.protocol import ControllerCommand, ProtocolError
+from uuid import uuid4
 
 ROOT = Path(__file__).parents[1]
 
@@ -40,5 +43,16 @@ class LoomForgeTests(unittest.TestCase):
             repo = JobRepository(Path(d) / "jobs.sqlite"); job = SimulationAdapter().run(self.recipe); repo.save(job)
             output = export_report(repo, job.job_id, Path(d) / "job-report.json")
             self.assertIn("SIMULATION", output.read_text())
+    def test_machine_coordinates_are_recipe_bound(self):
+        machine = MachineConfiguration()
+        machine.validate_recipe_reach(self.recipe)
+        self.assertEqual(machine.cavity_approach(4).x_mm, 4.2)
+        self.assertEqual(machine.tray_pickup(self.recipe.wires[1]).x_mm, -117.0)
+    def test_protocol_rejects_raw_motion(self):
+        message = {"command_id":str(uuid4()), "protocol_version":"1.0", "command":"START_JOB", "expected_state":"READY", "units":{"distance":"mm","speed":"mm/s","force":"N","time":"ms"}, "payload":{"coordinates":[1,2,3]}}
+        with self.assertRaises(ProtocolError): ControllerCommand.parse(message)
+    def test_protocol_accepts_bounded_start(self):
+        command = ControllerCommand.parse({"command_id":str(uuid4()), "protocol_version":"1.0", "command":"START_JOB", "expected_state":"READY", "units":{"distance":"mm","speed":"mm/s","force":"N","time":"ms"}, "payload":{"recipe_digest":"abc", "operator_confirmation":True}})
+        self.assertEqual(command.command.value, "START_JOB")
 
 if __name__ == "__main__": unittest.main()

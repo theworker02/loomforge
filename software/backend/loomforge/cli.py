@@ -13,11 +13,20 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="LoomForge local simulation")
     sub = parser.add_subparsers(dest="command", required=True)
     run = sub.add_parser("run"); run.add_argument("recipe"); run.add_argument("--scenario", choices=sorted(SCENARIOS), default="success"); run.add_argument("--database", default="reports/loomforge.sqlite")
+    validate = sub.add_parser("validate"); validate.add_argument("recipe")
+    sub.add_parser("scenarios")
     export = sub.add_parser("export"); export.add_argument("job_id"); export.add_argument("destination"); export.add_argument("--database", default="reports/loomforge.sqlite")
     serve = sub.add_parser("serve"); serve.add_argument("--database", default="reports/loomforge.sqlite"); serve.add_argument("--port", type=int, default=8787)
     args = parser.parse_args()
     if args.command == "run":
         record = SimulationAdapter().run(load_recipe(args.recipe), args.scenario); JobRepository(args.database).save(record); print(json.dumps(record.jsonable(), indent=2)); return
+    if args.command == "validate":
+        recipe = load_recipe(args.recipe)
+        from .machine import MachineConfiguration
+        MachineConfiguration().validate_recipe_reach(recipe)
+        print(json.dumps({"valid": True, "recipe_id": recipe.recipe_id, "configuration": "LF-P1-R02"}, indent=2)); return
+    if args.command == "scenarios":
+        print("\n".join(sorted(SCENARIOS))); return
     if args.command == "export":
         from .report import export_report
         print(export_report(JobRepository(args.database), args.job_id, args.destination)); return

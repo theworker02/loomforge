@@ -4,6 +4,7 @@ from datetime import UTC, datetime
 from uuid import uuid4
 
 from .models import Disposition, JobRecord, MachineState, Recipe, WireOutcome
+from .machine import MachineConfiguration
 from .state import transition
 
 SCENARIOS = {"success", "missing_wire", "terminal_misalignment", "excessive_resistance", "partial_seating", "incorrect_connection", "short_circuit", "fixture_mismatch", "door_open", "estop", "force_sensor_dropout", "controller_disconnect", "power_interruption"}
@@ -16,15 +17,20 @@ class SimulationAdapter:
             raise ValueError(f"unknown scenario {scenario}")
         now = datetime.now(UTC).isoformat()
         record = JobRecord(str(uuid4()), "SIMULATED", recipe.recipe_id, recipe.revision, recipe.fixture_id,
-                           recipe.calibration_id, scenario, "loomforge-sim-0.1.0", "SIMULATED-NO-FIRMWARE",
+                           recipe.calibration_id, scenario, "loomforge-sim-3.4", "SIMULATED-NO-FIRMWARE",
                            MachineState.DISCONNECTED.value, Disposition.INCOMPLETE.value, now)
         state = MachineState.DISCONNECTED
         for target in (MachineState.INITIALIZING, MachineState.NOT_HOMED, MachineState.READY, MachineState.LOADING, MachineState.VALIDATING):
             state = transition(state, target)
+        machine = MachineConfiguration(); machine.validate_recipe_reach(recipe)
         if scenario == "fixture_mismatch":
             return self._fail(record, state, MachineState.RECOVERY_REQUIRED, "FIXTURE_MISMATCH", "Fixture RFID differs from recipe; no motion started.")
         state = transition(state, MachineState.ASSEMBLING)
         for index, wire in enumerate(recipe.wires):
+            record.telemetry.extend([
+                {"event": "TRAY_PICKUP", "wire_id": wire.identifier, "position": machine.tray_pickup(wire).jsonable(), "synthetic": True},
+                {"event": "CAVITY_APPROACH", "wire_id": wire.identifier, "position": machine.cavity_approach(wire.target_cavity).jsonable(), "synthetic": True},
+            ])
             fault = scenario if index == 1 else ""
             if fault == "missing_wire":
                 return self._fail(record, state, MachineState.RECOVERY_REQUIRED, "WIRE_MISSING", f"Tray slot {wire.tray_slot} empty; operator must reload.")
@@ -44,6 +50,7 @@ class SimulationAdapter:
                 return self._fail(record, state, target, code, "Motion is stopped; automatic restart is prohibited.")
             trace = [0.2, 0.7, 1.9, 3.2, 3.7, 2.1]
             record.outcomes.append(WireOutcome(wire.identifier, wire.target_cavity, "PASS", "Synthetic insertion and proposed seating signature accepted.", trace))
+            record.telemetry.append({"event": "GUIDE_RELEASE", "wire_id": wire.identifier, "position": machine.insertion_target(wire.target_cavity).jsonable(), "synthetic": True})
         state = transition(state, MachineState.VERIFYING)
         if scenario == "incorrect_connection":
             record.electrical_results = {"result":"FAIL", "open":[], "wrong_mapping":[{"wire":"W2","expected":"J2-2","observed":"J2-3"}], "shorts":[], "note":"SIMULATED 5 V / 2 mA continuity mapping test"}

@@ -1,6 +1,6 @@
 [project]
 name = "loomforge"
-version = "0.1.0"
+version = "3.4"
 description = "Simulation-led engineering prototype for LoomForge"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -9,7 +9,7 @@ license-files = ["LICENSE", "NOTICE.md"]
 authors = [{name = "theworker02 and Magnexis"}]
 keywords = ["engineering", "simulation", "wire-harness", "connector", "manufacturing"]
 classifiers = [
-  "Development Status :: 2 - Pre-Alpha",
+  "Development Status :: 3 - Alpha",
   "Intended Audience :: Manufacturing",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
