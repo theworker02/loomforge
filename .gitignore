@@ -4,4 +4,6 @@ __pycache__/
 reports/*.sqlite
 reports/design-review-preview-*.png
 dist/
+dist-release/
+build/
 *.egg-info/
