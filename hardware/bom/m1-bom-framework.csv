@@ -1,0 +1,16 @@
+line_id,assembly,part_number,description,per_unit_qty,pilot_build_qty_12,proposed_spares,make_buy,source_class,revision,maturity,criticality,inspection_or_acceptance,substitution_rule,rfq_status
+001,structure,LF-100,Lower plinth structural shell,1,12,1,make,metal fabricator,R02,prototype fabrication pending,high,material/thickness/bend and hole inspection,no substitution without drawing review,RFQ pending
+002,structure,LF-110,Rear spine,1,12,1,make,machine shop,R02,prototype fabrication pending,high,datum and mounting-hole inspection,no substitution without drawing review,RFQ pending
+003,structure,LF-120,Swept side support pair,2,24,2,make,sheet-metal fabricator,R02,prototype fabrication pending,medium,fit to plinth/spine and cosmetic panel review,material/finish only with approval,RFQ pending
+004,motion,LF-620,XYZ rail/actuator assemblies,1,12,1,buy,motion supplier,R02,selection required,critical,travel/load/datasheet/configuration check,no substitute without motion and safety review,RFQ pending
+005,insertion,LF-210,Split terminal guide jaws,1,12,6,make,precision machine shop,R02,experimental,critical,inspection plus controlled insertion study,no substitute without validation,RFQ pending
+006,insertion,LF-220,Insulation gripper pads/jaws,1,12,12,make,precision shop/polymer supplier,R02,experimental,critical,material/contact-surface inspection,no substitute without wire-damage study,RFQ pending
+007,fixture,LF-310,Mini-Fit Jr fixture cartridge,1,12,3,make,machine shop,R02,controlled drawing required,critical,cavity datum/mating fit inspection,no substitute without connector review,RFQ blocked
+008,wire handling,LF-400,12-position wire tray,1,12,3,make,prototype additive manufacturer,R02,prototype only,medium,slot/keying/ESD material check,prototype material only with approval,RFQ pending
+009,guard,LF-500,Transparent front guard,1,12,2,make,guard fabricator,R02,safety review required,critical,material/thickness/edge/hinge fit review,no substitution without safety review,RFQ blocked
+010,connector,39-01-2040,Mini-Fit Jr 4-circuit housing,1,12,36,buy,authorized connector distributor,manufacturer controlled,provisional,critical,part/revision/packaging verification,no substitute,RFQ pending
+011,connector,39-00-0038,Mini-Fit Jr female terminal,4,48,96,buy,authorized connector distributor,manufacturer controlled,provisional,critical,part/reel/approved pre-crimp verification,no substitute,RFQ pending
+012,test,44281-0001,Mini-Fit Jr 4-circuit test plug,1,12,2,buy,authorized connector distributor,manufacturer controlled,provisional,critical,mating and continuity-fixture check,no substitute without test review,RFQ pending
+013,electrical,LF-610,Certified external 24 V supply,1,12,1,buy,qualified electrical supplier,R02,selection required,critical,certification/datasheet/lot record,no substitute without electrical review,RFQ blocked
+014,safety,LF-630,Safety relay/E-stop/door interlock set,1,12,1,buy,qualified safety supplier,R02,selection required,critical,safety function/test record,no substitute without safety review,RFQ blocked
+015,sensing,LF-640,0-50 N force sensor and conditioning,1,12,2,buy,sensor supplier,R02,selection required,critical,calibration certificate and overload review,no substitute without calibration review,RFQ blocked

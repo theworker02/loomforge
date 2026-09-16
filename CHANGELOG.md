@@ -2,6 +2,18 @@
 
 All notable changes are recorded here. This project is a development design package; entries do not indicate physical validation or production release.
 
+## [3.5] - 2026-09-15
+
+### Added
+
+- SC-A0 / M1 manufacturer handoff expansion: configuration management, process control, first-article template, nonconformance/CAPA procedure, supplier-evaluation framework, cost/capacity framework, interface-control register, and staged pilot execution plan.
+- A proposed serialized 12-unit M1 traveler, DFM risk register, RFQ line-item index, and machine-readable 12-unit BOM consistency check.
+- Pilot work instructions, calibration/test record forms, supplier data requirements, and an evidence-based gate-review checklist.
+
+### Changed
+
+- The manufacturer pilot package now explicitly gates later build waves on first-article and controlled verification evidence rather than treating a 12-unit count as a pass.
+
 ## [3.4] - 2026-09-14
 
 ### Added

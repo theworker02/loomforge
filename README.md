@@ -36,6 +36,10 @@ python -m software.backend.loomforge.cli serve --database reports/loomforge.sqli
 
 Open `http://127.0.0.1:8787`. The server is local-only and simulation-only. It will not fall back to a simulated adapter if a future physical adapter disconnects.
 
+## Interactive public demo and media
+
+Open `site/demo.html` locally or serve the `site/` directory for the standalone interactive LF-P1-R02 walkthrough. It includes a step-through assembly sequence, synthetic force display, fault injection, and downloadable simulated report. Product Hunt-ready media and launch guidance are in [docs/commercial/product-hunt-kit.md](docs/commercial/product-hunt-kit.md).
+
 ## Regenerate CAD
 
 Install OpenSCAD, then run:
@@ -47,6 +51,10 @@ openscad -o hardware/mechanical/exports/loomforge-assembly.stl hardware/mechanic
 The model is a parametric, conceptual envelope assembly—not a released fabrication model. See [CAD README](hardware/mechanical/source/README.md).
 
 ## Evidence boundaries
+
+## Manufacturer pilot package
+
+The proposed SC-A0 / 12-unit M1 manufacturer pilot is organized in the [manufacturer pilot package](docs/manufacturing/m1-manufacturer-pilot-package.md), including a BOM framework, supplier RFQ scopes, a serialized build traveler, a DFM risk register, and a proposed design-verification plan. It remains an engineering-development package, not a production release.
 
 - **Sourced:** manufacturer specifications and links in `docs/research/sources.md`.
 - **Calculated:** reproducible values in `calculations/preliminary_sizing.py`.

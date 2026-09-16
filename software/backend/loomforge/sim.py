@@ -17,7 +17,7 @@ class SimulationAdapter:
             raise ValueError(f"unknown scenario {scenario}")
         now = datetime.now(UTC).isoformat()
         record = JobRecord(str(uuid4()), "SIMULATED", recipe.recipe_id, recipe.revision, recipe.fixture_id,
-                           recipe.calibration_id, scenario, "loomforge-sim-3.4", "SIMULATED-NO-FIRMWARE",
+                           recipe.calibration_id, scenario, "loomforge-sim-3.5", "SIMULATED-NO-FIRMWARE",
                            MachineState.DISCONNECTED.value, Disposition.INCOMPLETE.value, now)
         state = MachineState.DISCONNECTED
         for target in (MachineState.INITIALIZING, MachineState.NOT_HOMED, MachineState.READY, MachineState.LOADING, MachineState.VALIDATING):

@@ -1,5 +1,9 @@
 # Build-readiness checklist
 
+## SC-A0 / proposed M1 pilot supplement
+
+For the proposed 12-unit manufacturer pilot, use the [SC-A0 manufacturing plan](sc-a0-manufacturing-plan.md), [M1 pilot traveler](m1-pilot-traveler.md), [DFM risk register](dfm-risk-register.md), [supplier RFQ package](supplier-rfq-package.md), and [design verification plan](design-verification-plan.md) alongside this checklist. These documents organize supplier review and controlled prototype evidence; they do not change the package to production-ready or authorize procurement.
+
 Do not label the package ready-to-manufacture. Before a prototype build, the receiving team must close each applicable item:
 
 - [ ] Controlled drawings/revisions for housing `39-01-2040`, terminal `39-00-0038`, and mating test interface reviewed.
