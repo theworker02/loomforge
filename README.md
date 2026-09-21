@@ -1,8 +1,8 @@
-# LoomForge
+﻿# LoomForge
 
-> **Scope of supply** — LoomForge supplies engineering plans, digital design files, software, and supporting documentation only. No physical machine or assembled equipment is supplied. The receiving manufacturer or its appointed machine builder must procure or fabricate the parts, assemble the equipment, and perform the necessary engineering review, safety assessment, calibration, testing, and application-specific validation before use. The current package is a development design and is not represented as production-ready or certified.
+> **Scope of supply** â€” LoomForge supplies engineering plans, digital design files, software, and supporting documentation only. No physical machine or assembled equipment is supplied. The receiving manufacturer or its appointed machine builder must procure or fabricate the parts, assemble the equipment, and perform the necessary engineering review, safety assessment, calibration, testing, and application-specific validation before use. The current package is a development design and is not represented as production-ready or certified.
 
-> **Manufacturer-led implementation** — We provide the plans and digital package. The receiving manufacturer or its appointed machine builder is responsible for procurement, fabrication, assembly, safeguarding, commissioning, calibration, operator training, maintenance, and application-specific validation.
+> **Manufacturer-led implementation** â€” We provide the plans and digital package. The receiving manufacturer or its appointed machine builder is responsible for procurement, fabrication, assembly, safeguarding, commissioning, calibration, operator training, maintenance, and application-specific validation.
 
 LoomForge is an early engineering prototype for a modular benchtop workstation that inserts **pre-crimped** wires into one supported connector family and verifies the completed connector through a mating electrical test interface.
 
@@ -16,11 +16,11 @@ The package is for review, engineering-package export, compatibility evaluation,
 
 This repository contains a functioning **local simulation** and engineering design package. Nothing here is evidence of physical performance, machinery safety compliance, production readiness, or aerospace qualification. Simulation reports and the UI are deliberately marked `SIMULATED`.
 
-The initial proposed differentiator is faster, mechanically keyed fixture/recipe changeover for small-batch work—not broad novelty in automated harness assembly.
+The initial proposed differentiator is faster, mechanically keyed fixture/recipe changeover for small-batch workâ€”not broad novelty in automated harness assembly.
 
 ## First selected system (provisional but sourced)
 
-Molex Mini-Fit Jr. 4-circuit receptacle housing `39-01-2040`, with `39-00-0038` female crimp terminals on 18–24 AWG stranded wire. See [connector selection](docs/research/connector-selection.md). The system is selected because Molex publishes an insertion-force requirement (15 N maximum) and a practical test plug exists (`44281-0001`). Exact housing drawing dimensions and the final wire/terminal supplier availability must be confirmed against controlled manufacturer documents before fabrication.
+Molex Mini-Fit Jr. 4-circuit receptacle housing `39-01-2040`, with `39-00-0038` female crimp terminals on 18â€“24 AWG stranded wire. See [connector selection](docs/research/connector-selection.md). The system is selected because Molex publishes an insertion-force requirement (15 N maximum) and a practical test plug exists (`44281-0001`). Exact housing drawing dimensions and the final wire/terminal supplier availability must be confirmed against controlled manufacturer documents before fabrication.
 
 ## Run the simulated acceptance demonstration
 
@@ -48,7 +48,7 @@ Install OpenSCAD, then run:
 openscad -o hardware/mechanical/exports/loomforge-assembly.stl hardware/mechanical/source/loomforge.scad
 ```
 
-The model is a parametric, conceptual envelope assembly—not a released fabrication model. See [CAD README](hardware/mechanical/source/README.md).
+The model is a parametric, conceptual envelope assemblyâ€”not a released fabrication model. See [CAD README](hardware/mechanical/source/README.md).
 
 ## Evidence boundaries
 
@@ -72,3 +72,7 @@ The proposed SC-A0 / 12-unit M1 manufacturer pilot is organized in the [manufact
 ## License and marks
 
 Repository material is available under the [MIT License](LICENSE). See [TRADEMARKS.md](TRADEMARKS.md) for name/mark use and no-endorsement boundaries.
+
+## License
+
+**Source-available proprietary** — evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md).
