@@ -1,4 +1,4 @@
-﻿[project]
+[project]
 name = "loomforge"
 version = "3.5"
 description = "Simulation-led engineering prototype for LoomForge"
